@@ -7,9 +7,9 @@ class Location:
         self.lat = lat      # latitude in degrees (-90 to 90)
         self.lon = lon      # longitude in degrees (-180 to 180)
     def __repr__(self):
-        return repr("Location(" + self.name + ", " + str(self.lat) + ", " + str(self.lon) + ")")
-    # def __eq__ (self, other):
-    #     return True #
+        return repr("Location('" + self.name + "', " + str(self.lat) + ", " + str(self.lon) + ")")
+    def __eq__ (self, other):
+        return repr(self) == repr(other)
 # ADD BOILERPLATE HERE (__eq__ and __repr__ functions)
 def main():
     loc1 = Location("SLO", 35.3, -120.7)
